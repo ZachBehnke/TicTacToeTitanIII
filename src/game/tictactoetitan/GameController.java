@@ -1,5 +1,7 @@
 package game.tictactoetitan;
 
+import java.net.MalformedURLException;
+
 import android.content.Intent;
 
 public class GameController {
@@ -13,5 +15,11 @@ public class GameController {
 		
 		Intent myIntent = new Intent(activity, GameActivity.class);
 		activity.startActivity(myIntent);
+		
+		try {
+			SocketController socket_controller = new SocketController();
+		} catch (MalformedURLException e) {
+			e.printStackTrace();
+		}
 	}
 }
