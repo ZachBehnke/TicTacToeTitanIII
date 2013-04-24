@@ -4,102 +4,111 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <LinearLayout
-        android:id="@+id/linearLayout1"
+    <Button
+        android:id="@+id/button1"
+        style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginRight="30dp"
-        android:layout_marginTop="92dp" >
+        android:layout_marginBottom="40dp"
+        android:text="Restart" />
 
-        <game.tictactoetitan.TicTacButton
-            android:id="@+id/TicTacButton01"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:background="@drawable/btn" />
-
-        <game.tictactoetitan.TicTacButton
-            android:id="@+id/TicTacButton02"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:background="@drawable/btn" />
-
-        <game.tictactoetitan.TicTacButton
-            android:id="@+id/TicTacButton03"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:background="@drawable/btn" />
-    </LinearLayout>
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="23dp"
+        android:src="@drawable/bg_board" />
 
     <LinearLayout
         android:id="@+id/linearLayout3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/linearLayout2"
-        android:layout_below="@+id/linearLayout1" >
+        android:layout_alignBottom="@+id/imageView1"
+        android:layout_alignLeft="@+id/linearLayout1"
+        android:layout_marginBottom="18dp" >
 
         <game.tictactoetitan.TicTacButton
             android:id="@+id/TicTacButton06"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:background="@drawable/btn" />
+            android:layout_margin="10dp"
+            android:background="@drawable/btn_" />
 
         <game.tictactoetitan.TicTacButton
             android:id="@+id/TicTacButton05"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:background="@drawable/btn" />
+            android:layout_margin="10dp"
+            android:background="@drawable/btn_" />
 
         <game.tictactoetitan.TicTacButton
             android:id="@+id/TicTacButton04"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:background="@drawable/btn" />
+            android:layout_margin="10dp"
+            android:background="@drawable/btn_" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/linearLayout1"
-        android:layout_below="@+id/linearLayout3" >
+        android:layout_above="@+id/linearLayout3"
+        android:layout_alignLeft="@+id/linearLayout3" >
 
         <game.tictactoetitan.TicTacButton
             android:id="@+id/TicTacButton09"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:background="@drawable/btn" />
+            android:layout_margin="10dp"
+            android:background="@drawable/btn_" />
 
         <game.tictactoetitan.TicTacButton
             android:id="@+id/TicTacButton08"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:background="@drawable/btn" />
+            android:layout_margin="10dp"
+            android:background="@drawable/btn_" />
 
         <game.tictactoetitan.TicTacButton
             android:id="@+id/TicTacButton07"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:background="@drawable/btn" />
+            android:layout_margin="10dp"
+            android:background="@drawable/btn_" />
     </LinearLayout>
 
-    <Button
-        android:id="@+id/button1"
-        style="?android:attr/buttonStyleSmall"
+    <LinearLayout
+        android:id="@+id/linearLayout1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/linearLayout2"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="48dp"
-        android:text="Restart" />
+        android:layout_above="@+id/linearLayout2"
+        android:layout_centerHorizontal="true" >
+
+        <game.tictactoetitan.TicTacButton
+            android:id="@+id/TicTacButton01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/btn_" />
+
+        <game.tictactoetitan.TicTacButton
+            android:id="@+id/TicTacButton02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/btn_" />
+
+        <game.tictactoetitan.TicTacButton
+            android:id="@+id/TicTacButton03"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/btn_" />
+    </LinearLayout>
 
 </RelativeLayout>
