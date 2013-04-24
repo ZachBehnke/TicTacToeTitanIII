@@ -40,31 +40,20 @@ public class GameActivity extends FragmentActivity {
 		tictac = new State[3][3];
 		state = State.circle;
 		
-		btn1 = (TicTacButton) findViewById(R.id.TicTacButton01); btn1.set_x(0); btn1.set_y(0); btn1.activity = this;
-		btn2 = (TicTacButton) findViewById(R.id.TicTacButton02); btn2.set_x(0); btn2.set_y(1); btn2.activity = this;
-		btn3 = (TicTacButton) findViewById(R.id.TicTacButton03); btn3.set_x(0); btn3.set_y(2); btn3.activity = this;
-		btn4 = (TicTacButton) findViewById(R.id.TicTacButton06); btn4.set_x(1); btn4.set_y(0); btn4.activity = this;
-		btn5 = (TicTacButton) findViewById(R.id.TicTacButton05); btn5.set_x(1); btn5.set_y(1); btn5.activity = this;
-		btn6 = (TicTacButton) findViewById(R.id.TicTacButton04); btn6.set_x(1); btn6.set_y(2); btn6.activity = this;
-		btn7 = (TicTacButton) findViewById(R.id.TicTacButton09); btn7.set_x(2); btn7.set_y(0); btn7.activity = this;
-		btn8 = (TicTacButton) findViewById(R.id.TicTacButton08); btn8.set_x(2); btn8.set_y(1); btn8.activity = this;
-		btn9 = (TicTacButton) findViewById(R.id.TicTacButton07); btn9.set_x(2); btn9.set_y(2); btn9.activity = this;
+		btn1 = (TicTacButton) findViewById(R.id.TicTacButton01); btn1.set_x(0); btn1.set_y(0); btn1.setActivity(this);
+		btn2 = (TicTacButton) findViewById(R.id.TicTacButton02); btn2.set_x(0); btn2.set_y(1); btn2.setActivity(this);
+		btn3 = (TicTacButton) findViewById(R.id.TicTacButton03); btn3.set_x(0); btn3.set_y(2); btn3.setActivity(this);
+		btn4 = (TicTacButton) findViewById(R.id.TicTacButton06); btn4.set_x(1); btn4.set_y(0); btn4.setActivity(this);
+		btn5 = (TicTacButton) findViewById(R.id.TicTacButton05); btn5.set_x(1); btn5.set_y(1); btn5.setActivity(this);
+		btn6 = (TicTacButton) findViewById(R.id.TicTacButton04); btn6.set_x(1); btn6.set_y(2); btn6.setActivity(this);
+		btn7 = (TicTacButton) findViewById(R.id.TicTacButton09); btn7.set_x(2); btn7.set_y(0); btn7.setActivity(this);
+		btn8 = (TicTacButton) findViewById(R.id.TicTacButton08); btn8.set_x(2); btn8.set_y(1); btn8.setActivity(this);
+		btn9 = (TicTacButton) findViewById(R.id.TicTacButton07); btn9.set_x(2); btn9.set_y(2); btn9.setActivity(this);
 		
 		btnReset = (Button) findViewById(R.id.button1);
 		btnReset.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
-				btn1.reset();
-				btn2.reset();
-				btn3.reset();
-				btn4.reset();
-				btn5.reset();
-				btn6.reset();
-				btn7.reset();
-				btn8.reset();
-				btn9.reset();
-				tictac = new State[3][3];
-				game_in_progress = true;
-				total_moves = 0;
+				reset();
 			}
 		});
 	}
@@ -107,5 +96,21 @@ public class GameActivity extends FragmentActivity {
 	
 	public void toast(String message){
 		Toast.makeText(getApplicationContext(), message, Toast.LENGTH_LONG).show();
+	}
+	
+	public void reset()
+	{
+		btn1.reset();
+		btn2.reset();
+		btn3.reset();
+		btn4.reset();
+		btn5.reset();
+		btn6.reset();
+		btn7.reset();
+		btn8.reset();
+		btn9.reset();
+		tictac = new State[3][3];
+		game_in_progress = true;
+		total_moves = 0;
 	}
 }

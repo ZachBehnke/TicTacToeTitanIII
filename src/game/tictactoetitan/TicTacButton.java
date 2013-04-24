@@ -10,7 +10,7 @@ public class TicTacButton extends ImageButton {
 	
 	enum State {cross, circle}
 
-	GameActivity activity;
+	private GameActivity activity;
 	private int _x,_y;
 	private boolean is_assigned = false;
 	
@@ -33,24 +33,24 @@ public class TicTacButton extends ImageButton {
 	{
 		setOnTouchListener(new OnTouchListener() {
 			public boolean onTouch(View v, MotionEvent event) {
-				if (!is_assigned && activity.game_in_progress) setBackgroundResource(R.drawable.btn_pressed);
+				if (!is_assigned && getActivity().game_in_progress) setBackgroundResource(R.drawable.btn_pressed);
 				return false;
 			}
 		});
 		
 		setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
-				if (!is_assigned && activity.game_in_progress) { change_state(); is_assigned = true; }
+				if (!is_assigned && getActivity().game_in_progress) { change_state(); is_assigned = true; }
 			}
 		});
 	}
 	
 	public void change_state()
 	{
-		if (activity.state == State.circle) setBackgroundResource(R.drawable.btn_circle);
-		if (activity.state == State.cross) setBackgroundResource(R.drawable.btn_cross);
+		if (getActivity().state == State.circle) setBackgroundResource(R.drawable.btn_circle);
+		if (getActivity().state == State.cross) setBackgroundResource(R.drawable.btn_cross);
 		
-		activity.change_state(_x,_y);
+		getActivity().change_state(_x,_y);
 	}
 	
 	public void reset()
@@ -63,4 +63,12 @@ public class TicTacButton extends ImageButton {
 	public void set_y(int y) {_y=y;}
 	public int get_x() {return _x;}
 	public int get_y() {return _y;}
+
+	public GameActivity getActivity() {
+		return activity;
+	}
+
+	public void setActivity(GameActivity activity) {
+		this.activity = activity;
+	}
 }
